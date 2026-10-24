@@ -22,20 +22,23 @@ const App = () => {
 
     <div className="gallery">
 
-      {UserData.map(function(elem){
-        if(UserData.length>0){
-          return <a href={elem.url} target='_blank'>
-              <div className="card">
-            <img src={elem.download_url} alt="" />
-             
-               <div className="overlay">
-    <h3>{elem.author}</h3>
-    <p>✨ Featured Photo</p>
-  </div>
+     {UserData.map(function(elem){
+  return (
+    <a key={elem.id} href={elem.url} target='_blank' rel='noreferrer'>
+      <div className="card">
+        <img
+          src={`https://picsum.photos/id/${elem.id}/600/400`}
+          alt={elem.author}
+          loading="lazy"
+        />
+        <div className="overlay">
+          <h3>{elem.author}</h3>
+          <p>✨ Featured Photo</p>
         </div>
-          </a>
-        }
-      })}
+      </div>
+    </a>
+  )
+})}
 
        
 

@@ -38,6 +38,7 @@ body{
     box-shadow:0 12px 25px rgba(0,0,0,.4);
     transition:.4s;
     animation: fade .5s ease;
+    background:#16283b;
 }
 @keyframes fade{
     from{
