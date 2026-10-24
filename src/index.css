@@ -1,0 +1,129 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+    background:#081420;
+}
+
+.gallery-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:50px 0;
+}
+
+.gallery-container h1{
+    text-align:center;
+    color:white;
+    margin-bottom:40px;
+    font-size:42px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.card{
+    position: relative;
+    height:250px;
+    overflow:hidden;
+    border-radius:18px;
+    cursor:pointer;
+    box-shadow:0 12px 25px rgba(0,0,0,.4);
+    transition:.4s;
+    animation: fade .5s ease;
+}
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+.overlay{
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    padding:20px;
+    background:linear-gradient(to top,
+        rgba(0,0,0,.85),
+        rgba(0,0,0,.2),
+        transparent);
+
+    color:#fff;
+
+    transform:translateY(100%);
+    transition:.4s ease;
+}
+
+.overlay h3{
+    font-size:22px;
+    margin-bottom:6px;
+}
+
+.overlay p{
+    font-size:15px;
+    color:#ddd;
+}
+
+.card:hover .overlay{
+    transform:translateY(0);
+}
+
+.card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.card:hover img{
+    transform:scale(1.1);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.pagination{
+    margin-top:50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+}
+
+.pagination button{
+    padding:12px 28px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(135deg,#00d2ff,#3a7bd5);
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(0,210,255,.3);
+}
+
+.pagination button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(0,210,255,.5);
+}
+
+.pagination span{
+    color:white;
+    font-size:22px;
+    font-weight:600;
+    min-width:100px;
+    text-align:center;
+}
