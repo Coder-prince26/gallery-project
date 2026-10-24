@@ -81,6 +81,6 @@ No API key is required.
 
 ## 👨‍💻 Author
 
-Made with ❤️ by **YOUR NAME**
+Made with ❤️ by **Prince Singh**
 
 - GitHub: [@Coder-prince26](https://github.com/Coder-prince26)
