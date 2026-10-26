@@ -2,6 +2,8 @@
 
 A responsive photo gallery built with **React** and **Vite**. It fetches photos from the [Lorem Picsum API](https://picsum.photos/) and shows them in a clean grid with hover effects and page-by-page navigation.
 
+🔗 **Live Demo:** [https://gallery-project-bay.vercel.app](https://gallery-project-bay.vercel.app)
+
 ## ✨ Features
 
 - Fetches 8 photos per page from the Picsum API using **Axios**
